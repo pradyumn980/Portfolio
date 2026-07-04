@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #020617;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B82F6;
+}
+
+/* Glassmorphism Panel Utility */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 41, 59, 0.75);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 12px 40px -10px rgba(59, 130, 246, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Glow Elements */
+.glow-spot {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.glow-blue {
+  background: radial-gradient(circle, #3B82F6 0%, transparent 70%);
+}
+
+.glow-cyan {
+  background: radial-gradient(circle, #06B6D4 0%, transparent 70%);
+}
+
+.glow-purple {
+  background: radial-gradient(circle, #8B5CF6 0%, transparent 70%);
+}
+
+/* Custom Cursor Styles */
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, select, input, textarea, [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Grid overlay background */
+.grid-bg {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.08) 1px, transparent 1px);
+}
+
+/* Hide scrollbar for elements while maintaining scroll function */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Timeline center line gradient */
+.timeline-line {
+  background: linear-gradient(to bottom, #3B82F6, #06B6D4, #8B5CF6);
+}
