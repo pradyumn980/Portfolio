@@ -161,24 +161,7 @@ export default function Hero() {
             
             {/* Dark Mask for border thickness */}
             <div className="absolute inset-[3px] rounded-full bg-[#020617] flex items-center justify-center overflow-hidden">
-              
-              {/* Profile Mockup SVG or Avatar */}
-              <div className="w-full h-full bg-slate-900/80 flex flex-col items-center justify-center p-6 relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent z-10" />
-                
-                {/* Tech Symbol background */}
-                <Code2 size={120} className="text-slate-800/40 absolute top-[25%]" />
-                
-                {/* Visual Avatar detail */}
-                <div className="z-20 text-center flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-3xl font-bold font-display shadow-neon-blue mb-4 border border-blue-400/30">
-                    PA
-                  </div>
-                  <h3 className="text-lg font-bold font-display text-white tracking-wide">Pradyumn</h3>
-                  <p className="text-xs text-cyan-400 font-mono tracking-widest mt-1 uppercase">Full-Stack Dev</p>
-                </div>
-              </div>
-
+              <img src="images/Pradyumn.jpeg" alt="Pradyumn" className="w-full h-full object-cover" />
             </div>
 
             {/* Floating Orbits */}
