@@ -23,7 +23,7 @@ export interface ExperienceItem {
 export interface ProjectItem {
   title: string;
   description: string;
-  category: 'Full Stack' | 'AI & NLP' | 'Frontend' | 'All';
+  category: 'Full Stack' | 'AI & NLP' | 'Frontend' | 'Full Stack & AI'| 'All';
   image: string;
   tech: string[];
   github: string;
@@ -250,6 +250,44 @@ export const PROJECTS_DATA: ProjectItem[] = [
     ]
   },
   {
+  title: "AniVerse AI",
+  description:
+    "An AI-powered anime discovery platform that helps users find anime through natural language search, personalized recommendations, and detailed information using modern AI technologies.",
+  category: "Full Stack & AI",
+  image: "aniverse",
+  tech: [
+    "React",
+    "Node.js",
+    "MongoDB",
+    "Express.js",
+    "Gemini API",
+    "Tailwind CSS"
+  ],
+  github: "https://github.com/pradyumn980/AnimeNew",
+  live: "https://anime-new-beta.vercel.app/",
+  features: [
+    "AI-powered natural language anime search",
+    "Personalized anime recommendations based on user preferences",
+    "Detailed anime information including ratings, genres, synopsis, and episodes",
+    "Responsive modern UI with authentication and favorites management"
+  ]
+},
+{
+    title: "AI Workout Recommendation System",
+    description: "An intelligent fitness coaching system that analyzes user preferences and goals to generate customized, structured workout regimes.",
+    category: "Full Stack & AI",
+    image: "fitness",
+    tech: ["React", "Python", "Hugging Face", "Firebase"],
+    github: "https://github.com/pradyumn980/gym",
+    live: "https://gym-nine-xi.vercel.app/",
+    features: [
+      "Personalized daily workout plans matching physical profiles",
+      "Machine learning models classifying exercises",
+      "Secure Firebase Auth with email & social login",
+      "Interactive goal tracking graphs and calendars"
+    ]
+  },
+  {
     title: "Real-Time Chat Application",
     description: "A modern instant messaging web application featuring end-to-end socket connections, secure token-based user authentication, and file sharing.",
     category: "Full Stack",
@@ -264,34 +302,5 @@ export const PROJECTS_DATA: ProjectItem[] = [
       "Unread messages count and active typing indicator"
     ]
   },
-  {
-    title: "AI Workout Recommendation System",
-    description: "An intelligent fitness coaching system that analyzes user preferences and goals to generate customized, structured workout regimes.",
-    category: "AI & NLP",
-    image: "fitness",
-    tech: ["React", "Python", "Hugging Face", "Firebase"],
-    github: "https://github.com/pradyumn980/gym",
-    live: "https://gym-nine-xi.vercel.app/",
-    features: [
-      "Personalized daily workout plans matching physical profiles",
-      "Machine learning models classifying exercises",
-      "Secure Firebase Auth with email & social login",
-      "Interactive goal tracking graphs and calendars"
-    ]
-  },
-  {
-    title: "Fake News Detection System",
-    description: "An advanced Natural Language Processing system built using state-of-the-art transformers to detect and classify news veracity.",
-    category: "AI & NLP",
-    image: "news",
-    tech: ["DistilBERT", "Hugging Face Transformers", "NLP", "Python"],
-    github: "https://github.com",
-    live: "https://example.com",
-    features: [
-      "DistilBERT fine-tuned model for text classification",
-      "Web scraping pipeline to fetch real-time news articles",
-      "Confidence percentage output for credibility estimation",
-      "Visual NLP text-attention heatmaps"
-    ]
-  }
+  
 ];
