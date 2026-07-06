@@ -240,7 +240,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: "Full Stack",
     image: "numberapp",
     tech: ["React", "Node.js", "MongoDB", "Socket.io"],
-    github: "https://github.com",
+    github: "https://github.com/himanshuu932/numberapp-next",
     live: "https://numberapp.in/",
     features: [
       "Real-time salon slot availability updates",
@@ -255,8 +255,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: "Full Stack",
     image: "chat",
     tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/pradyumn980/ChatApp",
+    live: "https://chat-app-eight-smoky-94.vercel.app/",
     features: [
       "User authentication and private secure chats",
       "Real-time text messaging and online status tracking",
@@ -270,8 +270,8 @@ export const PROJECTS_DATA: ProjectItem[] = [
     category: "AI & NLP",
     image: "fitness",
     tech: ["React", "Python", "Hugging Face", "Firebase"],
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/pradyumn980/gym",
+    live: "https://gym-nine-xi.vercel.app/",
     features: [
       "Personalized daily workout plans matching physical profiles",
       "Machine learning models classifying exercises",
