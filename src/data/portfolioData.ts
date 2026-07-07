@@ -210,9 +210,20 @@ export const SKILLS_DATA: SkillCategory[] = [
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
+    role: "Co-Founder",
+    company: "NumberApp",
+    duration: "02/2025 - Present",
+    description: [
+      "Co-founded and engineered a salon discovery platform designed to help users find nearby salons and reduce long waiting times.",
+      "Spearheaded technical product strategy, architecting both frontend and backend infrastructure.",
+      "Designed and implemented real-time slot checking and salon queuing mechanisms."
+    ],
+    skills: ["React", "Node.js", "MongoDB", "Socket.io", "Product Strategy"]
+  },
+  {
     role: "Full Stack Developer Intern",
     company: "YesCity",
-    duration: "Present",
+    duration: "01/2026 - 03/2026",
     description: [
       "Developing scalable web applications using React, Node.js, and modern databases.",
       "Building modular, reuseable frontend and backend systems, improving code maintainability.",
@@ -221,16 +232,29 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     skills: ["React", "Node.js", "Express.js", "MongoDB", "REST APIs"]
   },
   {
-    role: "Co-Founder",
-    company: "NumberApp",
-    duration: "Startup Journey",
+    role: "Full Stack Developer",
+    company: "Flux Society",
+    duration: "08/2025 - Present",
     description: [
-      "Co-founded and engineered a salon discovery platform designed to help users find nearby salons and reduce long waiting times.",
-      "Spearheaded technical product strategy, architecting both frontend and backend infrastructure.",
-      "Designed and implemented real-time slot checking and salon queuing mechanisms."
+      "Built and maintained the official website of Flux, the technical society of MMMUT.",
+      "Developed responsive and reusable frontend components for a seamless user experience.",
+      "Optimized website performance, accessibility, and cross-device compatibility.",
+      "Collaborated with the team to implement new features and maintain the society's digital platform."
     ],
-    skills: ["React", "Node.js", "MongoDB", "Socket.io", "Product Strategy"]
-  }
+    skills: ["React", "Node.js", "Express.js", "MongoDB", "REST APIs"]
+  },
+  {
+    role: "UI & Frontend Designing",
+    company: "MentHub",
+    duration: "06/2025 - 09/2025",
+    description: [
+      "Built 30+ high-fidelity Figma designs for a mentor-student matching platform that increased user engagement by 40%.",
+      "Implemented modern UI/UX design systems using React and Tailwind CSS, improving product aesthetics and brand consistency.",
+      "Collaborated with developers to integrate designs into the live platform, ensuring pixel-perfect execution and smooth user experiences."
+    ],
+    skills: ["Figma", "React", "Tailwind CSS", "UI/UX Design", "Prototyping"]
+  },
+  
 ];
 
 export const PROJECTS_DATA: ProjectItem[] = [
