@@ -15,6 +15,7 @@ export interface SkillCategory {
 export interface ExperienceItem {
   role: string;
   company: string;
+  website: string,
   duration: string;
   description: string[];
   skills: string[];
@@ -212,6 +213,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     role: "Co-Founder",
     company: "NumberApp",
+    website: "https://numberapp.in/",
     duration: "02/2025 - Present",
     description: [
       "Co-founded and engineered a salon discovery platform designed to help users find nearby salons and reduce long waiting times.",
@@ -223,6 +225,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     role: "Full Stack Developer Intern",
     company: "YesCity",
+    website: "https://www.yescity.in/",
     duration: "01/2026 - 03/2026",
     description: [
       "Developing scalable web applications using React, Node.js, and modern databases.",
@@ -234,6 +237,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     role: "Full Stack Developer",
     company: "Flux Society",
+    website: "https://www.flux.org.in/",
     duration: "08/2025 - Present",
     description: [
       "Built and maintained the official website of Flux, the technical society of MMMUT.",
@@ -246,6 +250,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     role: "UI & Frontend Designing",
     company: "MentHub",
+    website: "https://menthub.com/app",
     duration: "06/2025 - 09/2025",
     description: [
       "Built 30+ high-fidelity Figma designs for a mentor-student matching platform that increased user engagement by 40%.",
