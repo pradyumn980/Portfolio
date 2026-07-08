@@ -11,7 +11,7 @@ const SECTIONS = [
   { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
 ];
-
+//Navbar
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
