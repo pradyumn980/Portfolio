@@ -50,7 +50,9 @@ export default function Experience() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="w-full md:w-1/2 pl-12 md:pl-0 md:px-8"
+                    className={`w-full md:w-1/2 pl-12 ${
+                      isEven ? "md:pl-0 md:pr-8" : "md:pl-8 md:pr-0"
+                    }`}
                   >
                     <div className="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-slate-700 transition-all duration-300">
                       
