@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { Mail, Send, Linkedin, Github, Code2, Award, CheckCircle, AlertCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { PERSONAL_INFO } from "../data/portfolioData";
 
 export default function Contact() {
@@ -14,44 +13,36 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setLoading(true);
     setStatus('idle');
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
 
-    if (!serviceId || !templateId || !publicKey) {
-      // Mock mode fallback for local test
-      setTimeout(() => {
-        setLoading(false);
-        setStatus('success');
-        setFormData({ name: "", email: "", message: "" });
-        console.warn("EmailJS keys missing. Form submission completed in simulator/mock mode.");
-      }, 1000);
-      return;
-    }
-
-    emailjs
-      .sendForm(serviceId, templateId, formRef.current!, {
-        publicKey: publicKey,
-      })
-      .then(
-        () => {
-          setLoading(false);
-          setStatus('success');
-          setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch(`${backendUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.error("EmailJS failed:", error);
-          setLoading(false);
-          setStatus('error');
-        }
-      );
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setLoading(false);
+      setStatus('success');
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Backend submission failed:", error);
+      setLoading(false);
+      setStatus('error');
+    }
   };
 
   const socialLinks = [
