@@ -37,7 +37,9 @@ export default function Contact() {
     }
 
     emailjs
-      .sendForm(serviceId, templateId, formRef.current!, publicKey)
+      .sendForm(serviceId, templateId, formRef.current!, {
+        publicKey: publicKey,
+      })
       .then(
         () => {
           setLoading(false);
