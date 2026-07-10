@@ -31,7 +31,7 @@ app.use(
 
 app.use(express.json());
 
-// MongoDB Connection
+// MongoDB Connection set up
 const MONGO_URI = process.env.MONGO_URI;
 mongoose
   .connect(MONGO_URI)
