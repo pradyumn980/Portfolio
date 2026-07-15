@@ -9,7 +9,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const duration = 1200; // 1.2s loading speed
+    const duration = 1200; //1.2s loading speed
     const intervalTime = 15;
     const step = 100 / (duration / intervalTime);
 
