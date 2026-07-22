@@ -1,50 +1,205 @@
-# React + TypeScript + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and interactive personal portfolio built with **React, TypeScript, Vite, Tailwind CSS, and Framer Motion**. The portfolio showcases my projects, technical skills, professional experience, and achievements while providing a seamless way for recruiters and collaborators to connect with me.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 https://your-portfolio-link.vercel.app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📌 Features
 
-- Configure the top-level `parserOptions` property like this:
+- ✨ Modern UI with glassmorphism and gradient effects
+- 🎨 Responsive design for desktop, tablet, and mobile
+- ⚡ Smooth animations using Framer Motion
+- 🌙 Dark theme with premium color palette
+- 👨‍💻 About Me, Skills, Experience, Projects & Achievements sections
+- 📂 Featured projects with GitHub and Live Demo links
+- 📄 Download Resume functionality
+- 📬 Contact form with backend integration
+- 📊 Admin dashboard for managing contact messages
+- 📥 Export contact messages to Excel
+- 🔍 Search and filter contact submissions
+- 📈 Optimized for performance and SEO
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- ExcelJS
+
+### Deployment
+
+- Frontend: AWS S3 / CloudFront or Vercel
+- Backend: Render / AWS EC2
+- Database: MongoDB Atlas
+
+---
+
+## 📂 Project Structure
+
+```
+portfolio/
+│
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── hooks/
+│   ├── pages/
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## ⚙️ Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Clone the repository
+
+```bash
+git clone https://github.com/your-username/portfolio.git
 ```
+
+Move into the project directory
+
+```bash
+cd portfolio
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory.
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+For production
+
+```env
+VITE_API_URL=https://your-backend-url.onrender.com
+```
+
+---
+
+## 📬 Contact System
+
+The contact form sends user messages to a Node.js backend where they are securely stored in MongoDB.
+
+Each submission includes:
+
+- Name
+- Email
+- Message
+- Timestamp
+
+Messages can be managed through the admin dashboard.
+
+---
+
+## 📊 Admin Dashboard
+
+Features include:
+
+- View all messages
+- Search by name or email
+- Mark messages as read
+- Delete messages
+- Export messages to Excel
+- Dashboard statistics
+
+---
+
+## 💼 Featured Projects
+
+- NumberApp
+- AniVerse AI
+- Real-Time Chat Application
+- MediSuite AI Agent
+- AI Workout Recommendation System
+
+---
+
+## 🏆 Experience
+
+- Co-Founder — NumberApp
+- Full Stack Developer Intern — YesCity
+- Full Stack Developer — Flux Society
+- UI & Frontend Design Intern — MentHub
+
+---
+
+## 📱 Responsive Design
+
+Fully optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+## 📈 Future Improvements
+
+- Blog section
+- Light/Dark mode toggle
+- GitHub contribution graph
+- Visitor analytics
+- Multi-language support
+- Project filtering
+- AI chatbot assistant
+
+---
+
+## 👨‍💻 Author
+
+**Pradyumn Agrahari**
+
+- GitHub: https://github.com/your-username
+- LinkedIn: https://linkedin.com/in/your-profile
+- Portfolio: https://your-portfolio-link.vercel.app
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+Feel free to fork this repository and customize it for your own portfolio.
